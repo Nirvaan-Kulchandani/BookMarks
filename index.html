@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookMarks - by Nirvaan</title>
+    <style>
+        * {
+            align-items: center;
+            text-align: center;
+        }
+        
+        body {
+            background-color: rgb(247, 249, 250);
+        }
+
+        h1 {
+            color:rgb(35, 100, 102);
+            font-family: 'Algerian';
+            font-size: 50px;
+        }
+
+        h2 {
+            color:rgb(116, 71, 12);
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-size: 40px;
+        }
+
+        h4 {
+            color:rgb(35, 100, 102);
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            font-size: 25px;
+        }
+
+        a {
+            text-decoration: none;
+            margin: 0px;
+            padding: 0px;
+        }
+        a img {
+            display: inline-block;
+            transition: transform 0.5s ease;
+        }
+
+        a:hover img {
+            /* Simulates one top screw loosening and the bookmark "hanging" from the other screw:
+               - pivot from the top-right corner
+               - small rotation + drop with a gentle swing */
+            transform-origin: top right;
+            animation: loosen 700ms cubic-bezier(.2,.8,.2,1) forwards;
+        }
+
+        @keyframes loosen {
+            0% {
+                transform: rotate(0deg) translateY(0) scale(1);
+            }
+            40% {
+                transform: rotate(-24deg) translateY(10px) scale(1.02);
+            }
+            65% {
+                transform: rotate(-8deg) translateY(6px) scale(1.01);
+            }
+            100% {
+                transform: rotate(-14deg) translateY(8px) scale(1.01);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Bookmarks</h1>
+    <h2>Welcome!</h2>
+    <h4>Go to any of your favourite websites very quickly!</h4>
+    <div>
+        <h2><a href="./bookmarks.html"><img src="bookmark.png" alt="Click ME!" height="400"></a></h2>
+    </div>
+</body>
+</html>
